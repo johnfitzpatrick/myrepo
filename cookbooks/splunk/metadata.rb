@@ -9,3 +9,9 @@ depends "rightscale"
 
 recipe "splunk::install", "installs splunk from a tar file. Uses attributes and definitions"
 recipe "splunk::default", "Installs splunk from a tar file as well as the package 'tree'"
+
+attribute "splunk/user",
+:display_name => "Splunk User",
+:description => "The name of the Splunk user",
+:recipes => ["splunk::install"],
+:required => "required"

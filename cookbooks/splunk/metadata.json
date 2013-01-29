@@ -1,32 +1,45 @@
 {
+  "maintainer_email": "YOUR_EMAIL",
+  "name": "splunk",
+  "platforms": {
+  },
+  "description": "Installs/Configures splunk",
+  "providing": {
+  },
   "dependencies": {
     "rightscale": ">= 0.0.0"
   },
-  "conflicting": {
+  "version": "0.0.1",
+  "recipes": {
+    "splunk::install": "installs splunk from a tar file. Uses attributes and definitions",
+    "splunk::default": "Installs splunk from a tar file as well as the package 'tree'"
   },
+  "maintainer": "YOUR_COMPANY_NAME",
   "replacing": {
+  },
+  "license": "All rights reserved",
+  "conflicting": {
   },
   "suggestions": {
   },
-  "platforms": {
+  "groupings": {
   },
-  "maintainer_email": "YOUR_EMAIL",
-  "maintainer": "YOUR_COMPANY_NAME",
-  "recipes": {
-    "splunk::default": "Installs splunk from a tar file as well as the package 'tree'",
-    "splunk::install": "installs splunk from a tar file. Uses attributes and definitions"
-  },
-  "license": "All rights reserved",
   "attributes": {
+    "splunk/user": {
+      "choice": [
+
+      ],
+      "display_name": "Splunk User",
+      "description": "The name of the Splunk user",
+      "recipes": [
+        "splunk::install"
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "required"
+    }
   },
   "recommendations": {
   },
-  "description": "Installs/Configures splunk",
-  "name": "splunk",
-  "groupings": {
-  },
-  "providing": {
-  },
-  "version": "0.0.1",
   "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n"
 }
