@@ -23,7 +23,7 @@ directory node[:splunk][:installdir] do
 end
 
 remote_file "#{node[:splunk][:installdir]}/splunk.tar" do
-  source node [:splunk][:installfile]
+  source node[:splunk][:installfile]
   action :create_if_missing
 end
 
