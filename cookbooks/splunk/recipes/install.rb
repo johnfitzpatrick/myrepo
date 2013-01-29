@@ -16,7 +16,7 @@ user "#{node[:splunk][:user]}" do
   shell "/bin/bash"
 end
 
-directory node [:splunk][:installdir] do
+directory node[:splunk][:installdir] do
   owner "#{node[:splunk][:user]}"
   mode "0755"
   action :create
